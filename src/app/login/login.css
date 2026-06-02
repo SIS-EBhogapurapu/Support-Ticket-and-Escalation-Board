@@ -1,10 +1,9 @@
 /* Reset some default styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://as1.ftcdn.net/v2/jpg/18/61/46/44/1000_F_1861464491_qQXAnWZEwfWR7hDJREHj0nZPSlTdU4PB.jpg');
     background-size: cover;   
     background-position: center;
-    background-color: #f4f6f8;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
