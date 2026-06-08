@@ -1,77 +1,68 @@
-/* Reset some default styles */
+/* Center the login box on screen */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('/login-background.png');
-    background-size: cover;   
-    background-position: center;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Heading styling */
-.heading-container h3 {
-    margin: 0;
-    font-size: 28px;
-    color: #333;
+/* Login container */
+div {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
 }
 
-/* Form container box */
-.form-container {
-    background-color: #fff;
-    padding: 25px 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-/* Labels */
-.form-container label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #555;
-}
-
-/* Inputs */
-.form-container input {
-    width: 100%;
-    padding: 8px 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 /* Input focus effect */
-.form-container input:focus {
-    outline: none;
-    border-color: #0078d4;
-    box-shadow: 0 0 4px rgba(0, 120, 212, 0.5);
+input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
 }
 
-/* Optional: space between inputs */
-.form-container br {
-    display: none;
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4facfe;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.form-container button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #0078d4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;
+/* Button hover */
+button:hover {
+  background: #007bff;
 }
 
-.form-container button:hover {
-    background-color: #005ea6;
+/* Error message */
+p {
+  margin-top: 10px;
+  font-size: 14px;
 }

@@ -1,14 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, NgModule, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-root',
-  standalone:true,
-  imports: [LoginComponent],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RouterOutlet], 
+  template: `<router-outlet></router-outlet>`
 })
-export class App {
-  protected readonly title = signal('support-queue-system');
-}
+export class AppComponent {}

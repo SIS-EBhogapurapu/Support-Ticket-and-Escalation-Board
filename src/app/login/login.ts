@@ -1,28 +1,41 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',//this is important , as using this inside html files will run the code pertaining to it.
-  // A standalone component is a component that does NOT need an NgModule to work. Standalone → component works by itself, no module needed.
+  selector: 'app-login',
   standalone: true,
+  imports: [FormsModule],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
 })
 export class LoginComponent {
 
-  validateLogin() {
-    const username = (document.getElementById("Username") as HTMLInputElement).value.trim().toUpperCase();
-    const password = (document.getElementById("Password") as HTMLInputElement).value.trim().toUpperCase();
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-    if ((username === "ADMIN" && password === "ADMIN") ||
-        (username === "USER" && password === "USER")) {
-      alert("Login successful!");
+  constructor(private router: Router) {}
+
+  login() {
+    const user = this.username.trim().toUpperCase();
+    const password = this.password.trim().toUpperCase();
+
+    if (user === 'ADMIN' && password === 'ADMIN') {
+      console.log("Navigating...");
+      this.router.navigate(['/admin']);
+
+    } else if (user === 'USER' && password === 'USER') {
+      this.router.navigate(['/users']);
+
     } else {
-      alert("Invalid credentials");
+      alert("Incorrect credentials.");
     }
   }
-// Hostlistener is a decorator that lets the component listen to events directly from document object model
+
   @HostListener('document:keydown.enter')
   handleEnter() {
-    this.validateLogin();
+    this.login();
   }
 }
+``

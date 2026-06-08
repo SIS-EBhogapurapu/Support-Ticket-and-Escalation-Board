@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-users',
-  imports: [],
+  standalone: true,
   templateUrl: './users.html',
-  styleUrl: './users.css',
+  styleUrls: ['./users.css']
 })
-export class Users {}
+export class UsersComponent {
+
+}
