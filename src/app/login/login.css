@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-size: cover;   
     background-position: center;
-    background-color: #000000;
+    background-color: #fadded;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,7 +17,7 @@ body {
 .heading-container h3 {
     margin: 0;
     font-size: 28px;
-    color: #333;
+    color: #060505;
 }
 
 /* Form container box */
