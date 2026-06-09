@@ -1,58 +1,54 @@
 /* Sidebar container */
 .sidebar {
-  width: 10%;             
+  width: 220px;
   height: 100vh;
-  background: linear-gradient(180deg, #4b6cb7, #182848);
+  background: #1e3a8a;
   color: white;
   padding: 20px;
-  border-radius: 0 20px 20px 0; 
-  margin: 0;                    
   display: flex;
   flex-direction: column;
-  gap:15px;
 }
 
-
-/* Logo / Title */
+/* Logo */
 .logo {
   text-align: center;
   margin-bottom: 40px;
   font-size: 22px;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
-/* Menu list */
+/* Menu */
 .menu {
   list-style: none;
   padding: 0;
 }
 
-/* Each item */
+/* Menu items */
 .menu-item {
-  margin: 20px 0;
-  padding: 12px 15px;
-  border-radius: 10px;
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
+/* ✅ Hover → fade (transparent effect) */
 .menu-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0.6;
 }
 
-/* Active menu item */
+/* ✅ Active item (NO white box) */
 .menu-item.active {
-  background: #ffffff;
-  color: #182848;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
   font-weight: bold;
 }
 
-/* Logout styling */
+/* Logout */
 .logout {
-  margin-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: auto;
   padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }

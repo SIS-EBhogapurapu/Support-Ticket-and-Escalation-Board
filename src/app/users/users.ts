@@ -5,7 +5,7 @@ import { Sidebar } from '../sidebar/sidebar';
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [RouterModule, Sidebar],  //
+  imports: [RouterModule, Sidebar],
   templateUrl: './users.html',
   styleUrls: ['./users.css']
 })
