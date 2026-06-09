@@ -1,1 +1,88 @@
-<p>users-tq works!</p>
+<div class="layout">
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+  
+<div class="main-container">
+  <div class="header">
+    <h1>SUPPORT TICKET - INTERNAL WORK TRACKER</h1>
+  <div class="admin-btn">User</div>
+  </div>
+
+  <h4>Tickets Queue Table</h4>
+
+  <div class="table-section">
+    <h5>ALL TICKETS</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Title</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Owner</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>T001</td>
+          <td>Dummy1</td>
+          <td>High</td>
+          <td>Open</td>
+          <td>ADMIN</td>
+        </tr>
+
+        <tr>
+          <td>T002</td>
+          <td>Dummy2</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+        </tr>
+
+        <tr>
+          <td>T002</td>
+          <td>Dummy2</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+        </tr>
+
+        <tr>
+          <td>T003</td>
+          <td>Dummy3</td>
+          <td>Medium</td>
+          <td>OPEN</td>
+          <td>ADMIN</td>
+        </tr>
+
+        <tr>
+          <td>T004</td>
+          <td>Dummy4</td>
+          <td>LOW</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+        </tr>
+
+        <tr>
+          <td>T005</td>
+          <td>Dummy5</td>
+          <td>High</td>
+          <td>OPEN</td>
+          <td>ADMIN</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
