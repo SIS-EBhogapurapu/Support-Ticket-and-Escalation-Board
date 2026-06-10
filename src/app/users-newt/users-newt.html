@@ -1,1 +1,48 @@
-<p>users-newt works!</p>
+<div class="ticket-form">
+  <div class="form-header">
+    <h2>RAISE NEW TICKET</h2>
+    <span class="user-box">User</span>
+  </div>
+
+  <form>
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">TITLE</label>
+      <input type="text" id="title" name="title" />
+    </div>
+
+    <!-- Priority -->
+    <div class="form-group">
+      <label>Priority</label>
+      <div class="priority-options">
+        <label><input type="radio" name="priority" value="High" /> High</label>
+        <label><input type="radio" name="priority" value="Medium" /> Medium</label>
+        <label><input type="radio" name="priority" value="Low" /> Low</label>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" id="status" name="status" value="OPEN" readonly />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description"></textarea>
+    </div>
+
+    <!-- Assign Owner -->
+    <div class="form-group">
+      <label for="owner">Assign Owner</label>
+      <input type="text" id="owner" name="owner" value="ADMIN" readonly />
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-actions">
+      <button type="submit" class="btn-submit" routerLink="/Userstq" routerLinkActive="active">Submit</button>
+      <button type="button" class="btn-cancel" routerLink="/users" routerLinkActive="active">Cancel</button>
+    </div>
+  </form>
+</div>
