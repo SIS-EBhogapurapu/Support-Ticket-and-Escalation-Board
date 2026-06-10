@@ -154,3 +154,27 @@ tbody tr:last-child td {
   border: 1px solid #ccc;
   cursor: pointer;
 }
+
+/* Header inside table section */
+.table-header {
+  display: flex;
+  justify-content: space-between;  /* pushes button to right */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Add New Ticket button */
+.add-btn {
+  padding: 8px 18px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.add-btn:hover {
+  background: #f0f0f0;
+}
