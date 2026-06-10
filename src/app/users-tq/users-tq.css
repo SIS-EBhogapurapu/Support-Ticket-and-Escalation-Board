@@ -130,3 +130,27 @@ tbody tr:last-child td {
 .view-btn:hover {
   background: #f0f0f0;
 }
+
+/* Filters container */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Search input */
+.filters input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Dropdowns */
+.filters select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
