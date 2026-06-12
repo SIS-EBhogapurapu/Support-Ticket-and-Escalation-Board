@@ -1,7 +1,74 @@
 <div class="layout">
-  <app-admin-sidebar></app-admin-sidebar>
+  <div class="sidebar-container">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  
+<div class="main-container">
+  <div class="header">
+    <h1>SUPPORT TICKET - INTERNAL WORK TRACKER</h1>
+  <div class="admin-btn">ADMIN</div>
+  </div>
 
-  <div class="content">
+  <h4>Dashboard</h4>
+
+  <div class="cards">
+    <div class="card open">
+      <h6>Open Tickets</h6>
+      <p>N/A</p>
+    </div>
+
+    <div class="card closed">
+      <h6>Closed Tickets</h6>
+      <p>N/A</p>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <h5>RECENT TICKETS</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ticket ID</th>
+          <th>Title</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Owner</th>
+          <th>View</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>T001</td>
+          <td>Dummy1</td>
+          <td>High</td>
+          <td>Open</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+        <tr>
+          <td>T002</td>
+          <td>Dummy2</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="view-container" routerLink="/Userstq" routerLinkActive="active">
+      <div class="view-btn">View All</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="content-container">
     <router-outlet></router-outlet>
   </div>
 </div>
