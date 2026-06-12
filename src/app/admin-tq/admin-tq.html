@@ -1,0 +1,153 @@
+<div class="layout">
+  
+  <div class="sidebar-container">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+
+  <div class="main-container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>SUPPORT TICKET - INTERNAL WORK TRACKER</h1>
+      <div class="admin-btn">ADMIN</div>
+    </div>
+
+    <h4>Tickets Queue Table</h4>
+
+    <!-- ✅ TABLE SECTION -->
+    <div class="table-section">
+      <div class="table-header">
+        <h5>ALL TICKETS</h5>
+        <div class="add-btn" routerLink="/users-newt" routerLinkActive="active">Add New Ticket</div>
+      </div>
+
+
+      <!-- ✅ FILTER SECTION -->
+      <div class="filters">
+
+        <!-- Search -->
+        <input
+          type="text"
+          placeholder="Search by title..."
+          [(ngModel)]="searchText"
+          (input)="applyFilters()"
+        />
+
+        <!-- Priority Filter -->
+        <select [(ngModel)]="selectedPriority" (change)="applyFilters()">
+          <option value="">All Priority</option>
+          <option value="High">High</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <!-- Status Filter -->
+        <select [(ngModel)]="selectedStatus" (change)="applyFilters()">
+          <option value="">All Status</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Closed">Closed</option>
+        </select>
+
+      </div>
+
+      <!-- ✅ TABLE -->
+      <table>
+        <thead>
+          <tr>
+            <th>Ticket ID</th>
+            <th>Title</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Owner</th>
+            <th>View Ticket</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let ticket of filteredTickets">
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.name }}</td>
+            <td>{{ ticket.priority }}</td>
+            <td>{{ ticket.status }}</td>
+            <td>{{ ticket.owner }}</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+        <tr>
+          <td>T001</td>
+          <td>Dummy1</td>
+          <td>High</td>
+          <td>Open</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+
+
+        <tr>
+          <td>T002</td>
+          <td>Dummy2</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+
+
+        <tr>
+          <td>T002</td>
+          <td>Dummy2</td>
+          <td>Medium</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+
+
+        <tr>
+          <td>T003</td>
+          <td>Dummy3</td>
+          <td>Medium</td>
+          <td>OPEN</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+
+
+        <tr>
+          <td>T004</td>
+          <td>Dummy4</td>
+          <td>LOW</td>
+          <td>Closed</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+
+
+        <tr>
+          <td>T005</td>
+          <td>Dummy5</td>
+          <td>High</td>
+          <td>OPEN</td>
+          <td>ADMIN</td>
+          <td><a routerLink="/users-tdes" routerLinkActive="active">View</a></td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- ✅ router outlet stays (if needed for nested routes) -->
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
