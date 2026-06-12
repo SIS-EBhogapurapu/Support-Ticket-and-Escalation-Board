@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule } from "@angular/router";
 import { Sidebar } from '../sidebar/sidebar';
 import { FormsModule } from '@angular/forms';
+import { UsersTdesComponent } from '../users-tdes/users-tdes';
 
 @Component({
   selector: 'app-users-tq',
   standalone:true,
-  imports: [RouterModule,RouterLink,RouterLinkActive,Sidebar,FormsModule],
+  imports: [RouterModule,RouterLink,RouterLinkActive,Sidebar,FormsModule,UsersTdesComponent],
   templateUrl: './users-tq.html',
   styleUrl: './users-tq.css',
 })
