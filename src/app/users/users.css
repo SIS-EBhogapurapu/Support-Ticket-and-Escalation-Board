@@ -40,6 +40,7 @@ h1 {
 
 /* User Button */
 .admin-btn {
+  margin-left: 200px;
   padding: 10px 20px;
   border: 2px solid #333;
   border-radius: 20px;
