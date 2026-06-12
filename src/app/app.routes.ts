@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'admin', component: AdminComponent},
   { path: 'Userstq', component: UsersTqComponent},
-  { path: 'users-newt', component:UsersNewtComponent},
+  { path: 'users-newt', component:UsersNewtComponent}, 
   { path: 'users-tdes', component: UsersTdesComponent}
 ];
 

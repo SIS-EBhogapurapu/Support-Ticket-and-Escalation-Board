@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { AdminSidebar } from '../admin-sidebar/admin-sidebar';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,RouterLinkActive,RouterLink,AdminSidebar],
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
