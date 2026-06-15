@@ -1,0 +1,106 @@
+/* Main Container */
+.details-container {
+  padding: 30px;
+  border: 3px solid #333;
+  border-radius: 25px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.back-arrow {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Admin Button */
+.admin-btn {
+  padding: 10px 25px;
+  border: 2px solid #333;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* Main Content Layout */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+/* Left Info Box */
+.info-box {
+  flex: 1;
+  border: 3px solid #333;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.info-box p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+/* Right Description Box */
+.desc-box {
+  flex: 1;
+  border: 3px solid #333;
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.desc-box h3 {
+  margin-top: 0;
+}
+
+/* Comments Section */
+.comments-box {
+  margin-top: 30px;
+  border: 3px solid #333;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+/* Comment Input */
+.comment-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.comment-input button {
+  padding: 10px 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Edit Button */
+.edit-btn {
+  margin-top: 20px;
+  float: right;
+  padding: 10px 25px;
+  border: 2px solid #333;
+  border-radius: 12px;
+  cursor: pointer;
+}
