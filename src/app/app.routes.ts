@@ -10,6 +10,7 @@ import { AdminTqComponent } from './admin-tq/admin-tq';
 import { AdminNewtComponent } from './admin-newt/admin-newt';
 import { AdminTdesComponent } from "./admin-tdes/admin-tdes";
 import { AdminUsersComponent } from "./admin-users/admin-users";
+import { AboutComponent } from "./about/about";
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,7 +22,8 @@ export const routes: Routes = [
   { path: 'admin-tq', component: AdminTqComponent},
   { path: 'admin-newt', component:AdminNewtComponent},
   { path: 'admin-tdes', component:AdminTdesComponent},
-  { path: 'admin-users', component:AdminUsersComponent}
+  { path: 'admin-users', component:AdminUsersComponent},
+  { path: '', component:AboutComponent}
 ];
 
 @NgModule({
