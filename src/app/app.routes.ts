@@ -9,9 +9,7 @@ import { UsersTdesComponent } from "./users-tdes/users-tdes";
 import { AdminTqComponent } from './admin-tq/admin-tq';
 import { AdminNewtComponent } from './admin-newt/admin-newt';
 import { AdminTdesComponent } from "./admin-tdes/admin-tdes";
-
-
-
+import { AdminUsersComponent } from "./admin-users/admin-users";
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,7 +20,8 @@ export const routes: Routes = [
   { path: 'users-tdes', component: UsersTdesComponent},
   { path: 'admin-tq', component: AdminTqComponent},
   { path: 'admin-newt', component:AdminNewtComponent},
-  { path:'admin-tdes', component:AdminTdesComponent}
+  { path: 'admin-tdes', component:AdminTdesComponent},
+  { path: 'admin-users', component:AdminUsersComponent}
 ];
 
 @NgModule({
