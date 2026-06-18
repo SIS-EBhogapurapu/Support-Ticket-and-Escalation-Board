@@ -11,18 +11,19 @@ import { AdminNewtComponent } from './admin-newt/admin-newt';
 import { AdminTdesComponent } from "./admin-tdes/admin-tdes";
 import { AdminUsersComponent } from "./admin-users/admin-users";
 import { AboutComponent } from "./about/about";
+import { AuthGuard } from "./auth-guard";
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'admin', component: AdminComponent},
-  { path: 'Userstq', component: UsersTqComponent},
-  { path: 'users-newt', component:UsersNewtComponent}, 
-  { path: 'users-tdes', component: UsersTdesComponent},
-  { path: 'admin-tq', component: AdminTqComponent},
-  { path: 'admin-newt', component:AdminNewtComponent},
-  { path: 'admin-tdes', component:AdminTdesComponent},
-  { path: 'admin-users', component:AdminUsersComponent},
+  { path: 'users', component: UsersComponent, canActivate:[AuthGuard] },
+  { path: 'admin', component: AdminComponent, canActivate:[AuthGuard] },
+  { path: 'Userstq', component: UsersTqComponent, canActivate:[AuthGuard] },
+  { path: 'users-newt', component:UsersNewtComponent, canActivate:[AuthGuard] }, 
+  { path: 'users-tdes', component: UsersTdesComponent, canActivate:[AuthGuard] },
+  { path: 'admin-tq', component: AdminTqComponent, canActivate:[AuthGuard] },
+  { path: 'admin-newt', component:AdminNewtComponent, canActivate:[AuthGuard] },
+  { path: 'admin-tdes', component:AdminTdesComponent, canActivate:[AuthGuard] },
+  { path: 'admin-users', component:AdminUsersComponent, canActivate:[AuthGuard] },
   { path: '', component:AboutComponent}
 ];
 
