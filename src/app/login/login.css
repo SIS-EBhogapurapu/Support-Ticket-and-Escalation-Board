@@ -1,62 +1,117 @@
-/* Center the login box on screen */
+/* Page background */
 body {
-    font-family: Arial, sans-serif;
-    background-size: cover;   
-    background-position: center;
-    background-color: grey;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e8ecf4 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Login container */
+.login-container {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Heading styling */
 .heading-container h3 {
-    margin: 0;
-    font-size: 28px;
-    color: #060505;
+  margin: 0 0 30px 0;
+  font-size: 32px;
+  color: #1e3a8a;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form wrapper */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* Input fields */
 input {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #eef1f7;
   outline: none;
   font-size: 14px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: #f5f7fb;
 }
 
 /* Input focus effect */
 input:focus {
-  border-color: #4facfe;
-  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+  border-color: #1e3a8a;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(30, 58, 138, 0.2);
+}
+
+/* Input placeholder */
+input::placeholder {
+  color: #999;
 }
 
 /* Button */
 button {
   width: 100%;
-  padding: 10px;
-  background: #4facfe;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2d5aa0 100%);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   color: white;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 /* Button hover */
 button:hover {
-  background: #007bff;
+  background: linear-gradient(135deg, #152d6b 0%, #1e3a8a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.4);
+}
+
+/* Button active */
+button:active {
+  transform: translateY(0);
 }
 
 /* Error message */
 p {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
+  color: #d32f2f;
+  text-align: center;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 6px;
+  border-left: 4px solid #d32f2f;
+}
+
+/* Success message */
+.success {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  border-left-color: #2e7d32;
 }
