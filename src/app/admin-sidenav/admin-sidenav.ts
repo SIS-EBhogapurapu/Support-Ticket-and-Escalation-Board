@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-users-tdes',
-  standalone: true,
+  selector: 'app-admin-sidenav',
+  standalone:true,
   imports: [RouterLink,RouterLinkActive,RouterModule],
-  templateUrl: './users-tdes.html',
-  styleUrl: './users-tdes.css',
+  templateUrl: './admin-sidenav.html',
+  styleUrl: './admin-sidenav.css',
 })
-export class UsersTdesComponent {}
+export class AdminSidenav {}

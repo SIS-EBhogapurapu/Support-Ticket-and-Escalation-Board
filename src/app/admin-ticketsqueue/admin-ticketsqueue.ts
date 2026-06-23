@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterEvent, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
-import { AdminSidebar } from '../admin-sidebar/admin-sidebar';
+import { AdminSidenav } from '../admin-sidenav/admin-sidenav';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-admin-tq',
+  selector: 'app-admin-ticketsqueue',
   standalone:true,
-  imports: [RouterLink,RouterLinkActive,RouterModule,AdminSidebar,FormsModule],
-  templateUrl: './admin-tq.html',
-  styleUrl: './admin-tq.css',
+  imports: [RouterLink,RouterLinkActive,RouterModule,AdminSidenav,FormsModule],
+  templateUrl: './admin-ticketsqueue.html',
+  styleUrl: './admin-ticketsqueue.css',
 })
-export class AdminTqComponent {
+export class AdminTicketsqueueComponent {
   tickets = [
   { id: 'T001', name: 'Dummy1', priority: 'High', status: 'Open', owner: 'ADMIN' },
   { id: 'T002', name: 'Dummy2', priority: 'Moderate', status: 'Closed', owner: 'ADMIN' },
