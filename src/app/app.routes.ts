@@ -8,7 +8,7 @@ import { UsersNewticketComponent } from './users-newticket/users-newticket';
 import { UsersTicketdescriptionComponent } from "./users-ticketdescription/users-ticketdescription";
 import { AdminTicketsqueueComponent } from './admin-ticketsqueue/admin-ticketsqueue';
 import { AdminNewticketComponent } from './admin-newticket/admin-newticket';
-import { AdminTdesComponent } from "./admin-tdes/admin-tdes";
+import { AdminTicketdescriptionComponent } from "./admin-ticketdescription/admin-ticketdescription";
 import { AdminManageusersComponent } from "./admin-manageusers/admin-manageusers";
 import { AboutComponent } from "./about/about";
 import { AuthGuard } from "./auth-guard";
@@ -22,7 +22,7 @@ export const routes: Routes = [
   { path: 'users-ticketdescription', component: UsersTicketdescriptionComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
   { path: 'admin-ticketsqueue', component: AdminTicketsqueueComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: 'admin-newticket', component:AdminNewticketComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
-  { path: 'admin-tdes', component:AdminTdesComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
+  { path: 'admin-ticketdescription', component:AdminTicketdescriptionComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
   { path: 'admin-manageusers', component:AdminManageusersComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: '', component:AboutComponent}
 ];
