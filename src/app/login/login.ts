@@ -22,11 +22,14 @@ export class LoginComponent {
     const password = this.password.trim().toUpperCase();
 
     if (user === 'ADMIN' && password === 'ADMIN') {
-      console.log("Navigating...");
-      this.router.navigate(['/admin']);
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('role', 'admin');
+      this.router.navigate(['/admin-admin-dashboard']);
 
     } else if (user === 'USER' && password === 'USER') {
-      this.router.navigate(['/users']);
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('role', 'user');
+      this.router.navigate(['/users-dashboard']);
 
     } else {
       alert("Incorrect credentials.");
