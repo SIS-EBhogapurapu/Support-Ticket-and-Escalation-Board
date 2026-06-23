@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminSidebar } from './admin-sidebar';
+import { AdminSidenav } from './admin-sidenav';
 
 describe('AdminSidebar', () => {
-  let component: AdminSidebar;
-  let fixture: ComponentFixture<AdminSidebar>;
+  let component: AdminSidenav;
+  let fixture: ComponentFixture<AdminSidenav>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminSidebar],
+      imports: [AdminSidenav],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AdminSidebar);
+    fixture = TestBed.createComponent(AdminSidenav);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
@@ -20,3 +20,4 @@ describe('AdminSidebar', () => {
     expect(component).toBeTruthy();
   });
 });
+

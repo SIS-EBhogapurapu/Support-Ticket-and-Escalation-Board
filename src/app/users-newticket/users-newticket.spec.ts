@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersNewt } from './users-newt';
+import { UsersNewticketComponent } from './users-newticket';
 
 describe('UsersNewt', () => {
-  let component: UsersNewt;
-  let fixture: ComponentFixture<UsersNewt>;
+  let component: UsersNewticketComponent;
+  let fixture: ComponentFixture<UsersNewticketComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UsersNewt],
+      imports: [UsersNewticketComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UsersNewt);
+    fixture = TestBed.createComponent(UsersNewticketComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
@@ -20,3 +20,4 @@ describe('UsersNewt', () => {
     expect(component).toBeTruthy();
   });
 });
+

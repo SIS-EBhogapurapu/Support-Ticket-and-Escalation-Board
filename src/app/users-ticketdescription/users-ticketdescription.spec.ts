@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersTdes } from './users-tdes';
+import { UsersTicketdescriptionComponent } from './users-ticketdescription';
 
 describe('UsersTdes', () => {
-  let component: UsersTdes;
-  let fixture: ComponentFixture<UsersTdes>;
+  let component: UsersTicketdescriptionComponent;
+  let fixture: ComponentFixture<UsersTicketdescriptionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UsersTdes],
+      imports: [UsersTicketdescriptionComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UsersTdes);
+    fixture = TestBed.createComponent(UsersTicketdescriptionComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
@@ -20,3 +20,4 @@ describe('UsersTdes', () => {
     expect(component).toBeTruthy();
   });
 });
+

@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminTq } from './admin-tq';
+import { AdminTicketsqueueComponent } from './admin-ticketsqueue';
 
 describe('AdminTq', () => {
-  let component: AdminTq;
-  let fixture: ComponentFixture<AdminTq>;
+  let component: AdminTicketsqueueComponent;
+  let fixture: ComponentFixture<AdminTicketsqueueComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminTq],
+      imports: [AdminTicketsqueueComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AdminTq);
+    fixture = TestBed.createComponent(AdminTicketsqueueComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
@@ -20,3 +20,4 @@ describe('AdminTq', () => {
     expect(component).toBeTruthy();
   });
 });
+

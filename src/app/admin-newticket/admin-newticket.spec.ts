@@ -1,17 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminNewt } from './admin-newt';
+import { AdminNewticketComponent } from './admin-newticket';
 
 describe('AdminNewt', () => {
-  let component: AdminNewt;
-  let fixture: ComponentFixture<AdminNewt>;
+  let component: AdminNewticketComponent;
+  let fixture: ComponentFixture<AdminNewticketComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminNewt],
+      imports: [AdminNewticketComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AdminNewt);
+    fixture = TestBed.createComponent(AdminNewticketComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
@@ -20,3 +20,4 @@ describe('AdminNewt', () => {
     expect(component).toBeTruthy();
   });
 });
+
