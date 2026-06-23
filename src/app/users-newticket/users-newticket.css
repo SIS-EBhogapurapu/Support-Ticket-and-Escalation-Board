@@ -1,91 +1,219 @@
+/* Page background */
+body {
+  background: linear-gradient(135deg, #f5f7fb 0%, #e8ecf4 100%);
+  min-height: 100vh;
+}
+
+/* Ticket form container */
+/* Main Container */
 .ticket-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e8ecf4 100%);
+  min-height: 100vh;
   font-family: Arial, sans-serif;
 }
 
+/* Form Header Container */
 .form-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
+  margin-bottom: 30px;
 }
 
 .form-header h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 28px;
+  color: #1e3a8a;
+  font-weight: 600;
 }
 
+/* User Label */
 .admin-box {
-  background: #333;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
   font-size: 14px;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
 }
 
+/* Form Group */
 .form-group {
-  margin-bottom: 15px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
+  margin-bottom: 25px;
+  border-left: 5px solid #2e7d32;
 }
 
 .form-group label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-.form-group input[type="text"],
-.form-group textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1e3a8a;
   font-size: 14px;
 }
 
+/* Input Fields */
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #eef1f7;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  background-color: #f5f7fb;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(30, 58, 138, 0.15);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+/* Priority Options */
 .priority-options {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  padding: 15px;
+  background: #f5f7fb;
+  border-radius: 8px;
+  margin-top: 12px;
 }
 
 .priority-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: normal;
+  color: #333;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.priority-options input[type="radio"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #1e3a8a;
+}
+
+.priority-options label:hover {
+  color: #2e7d32;
+}
+
+/* Status Field - Read Only */
+.form-group input[readonly] {
+  background-color: #eef1f7;
+  cursor: not-allowed;
+}
+
+/* Form Actions Container */
 .form-actions {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 15px;
+  border-left: 5px solid #2e7d32;
 }
 
+/* Submit Button */
 .btn-submit {
-  background: #007bff;
-  color: #fff;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+  color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-}
-
-.btn-cancel {
-  background: #ccc;
-  color: #333;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+  font-size: 14px;
 }
 
 .btn-submit:hover {
-  background: #0056b3;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Cancel Button */
+.btn-cancel {
+  padding: 12px 28px;
+  background: white;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
 }
 
 .btn-cancel:hover {
-  background: #999;
+  background: #1e3a8a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+
+.btn-cancel:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ticket-form {
+    padding: 20px;
+  }
+
+  .form-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .form-header h2 {
+    font-size: 24px;
+  }
+
+  .priority-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
 }
