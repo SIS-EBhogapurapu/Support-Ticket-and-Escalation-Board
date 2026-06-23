@@ -22,14 +22,10 @@ export class LoginComponent {
     const password = this.password.trim().toUpperCase();
 
     if (user === 'ADMIN' && password === 'ADMIN') {
-      localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('role', 'admin');
-
+      console.log("Navigating...");
       this.router.navigate(['/admin']);
 
     } else if (user === 'USER' && password === 'USER') {
-      localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('role', 'user');
       this.router.navigate(['/users']);
 
     } else {
