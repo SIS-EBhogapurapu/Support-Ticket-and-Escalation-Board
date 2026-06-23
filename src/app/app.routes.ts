@@ -1,28 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { LoginComponent } from './login/login';
-import { UsersComponent } from './users/users';
-import { AdminComponent } from "./admin/admin";
-import { UsersTqComponent } from "./users-tq/users-tq";
-import { UsersNewtComponent } from './users-newt/users-newt';
-import { UsersTdesComponent } from "./users-tdes/users-tdes";
-import { AdminTqComponent } from './admin-tq/admin-tq';
-import { AdminNewtComponent } from './admin-newt/admin-newt';
-import { AdminTdesComponent } from "./admin-tdes/admin-tdes";
-import { AdminUsersComponent } from "./admin-users/admin-users";
+import { UsersDashboardComponent } from './users-dashboard/users-dashboard';
+import { AdminAdminDashboardComponent } from "./admin-admin-dashboard/admin-admin-dashboard";
+import { UsersTicketqueueComponent } from "./users-ticketqueue/users-ticketqueue";
+import { UsersNewticketComponent } from './users-newticket/users-newticket';
+import { UsersTicketdescriptionComponent } from "./users-ticketdescription/users-ticketdescription";
+import { AdminTicketsqueueComponent } from './admin-ticketsqueue/admin-ticketsqueue';
+import { AdminNewticketComponent } from './admin-newticket/admin-newticket';
+import { AdminTicketdescriptionComponent } from "./admin-ticketdescription/admin-ticketdescription";
+import { AdminManageusersComponent } from "./admin-manageusers/admin-manageusers";
 import { AboutComponent } from "./about/about";
+import { AuthGuard } from "./auth-guard";
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'admin', component: AdminComponent},
-  { path: 'Userstq', component: UsersTqComponent},
-  { path: 'users-newt', component:UsersNewtComponent}, 
-  { path: 'users-tdes', component: UsersTdesComponent},
-  { path: 'admin-tq', component: AdminTqComponent},
-  { path: 'admin-newt', component:AdminNewtComponent},
-  { path: 'admin-tdes', component:AdminTdesComponent},
-  { path: 'admin-users', component:AdminUsersComponent},
+  { path: 'users-dashboard', component: UsersDashboardComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
+  { path: 'admin-admin-dashboard', component: AdminAdminDashboardComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
+  { path: 'users-ticketqueue', component: UsersTicketqueueComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
+  { path: 'users-newticket', component:UsersNewticketComponent, canActivate:[AuthGuard], data: { role: 'user' } },
+  { path: 'users-ticketdescription', component: UsersTicketdescriptionComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
+  { path: 'admin-ticketsqueue', component: AdminTicketsqueueComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
+  { path: 'admin-newticket', component:AdminNewticketComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
+  { path: 'admin-ticketdescription', component:AdminTicketdescriptionComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
+  { path: 'admin-manageusers', component:AdminManageusersComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: '', component:AboutComponent}
 ];
 

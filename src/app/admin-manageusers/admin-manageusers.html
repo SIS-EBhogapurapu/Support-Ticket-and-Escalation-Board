@@ -1,0 +1,33 @@
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar-container">
+    <app-admin-sidenav></app-admin-sidenav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>USERS</h1>
+      <div class="admin-btn">ADMIN</div>
+    </div>
+
+    <!-- Users Card -->
+    <div class="users-box">
+
+      <div class="user-row" *ngFor="let user of users">
+        <span class="user-name">{{ user }}</span>
+        <button class="delete-btn">DELETE</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="content-container">
+<router-outlet></router-outlet>
+</div>
