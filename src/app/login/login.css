@@ -97,6 +97,33 @@ button:active {
   transform: translateY(0);
 }
 
+/* About button */
+.about-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: white;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+}
+
+.about-btn:hover {
+  background: #1e3a8a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.3);
+}
+
+.about-btn:active {
+  transform: translateY(0);
+}
+
 /* Error message */
 p {
   margin-top: 15px;
