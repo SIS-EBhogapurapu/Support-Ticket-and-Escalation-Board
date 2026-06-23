@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from '@angular/router';
+import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 import { UsersDashboardComponent } from './users-dashboard/users-dashboard';
 import { AdminAdminDashboardComponent } from "./admin-admin-dashboard/admin-admin-dashboard";
@@ -19,17 +18,11 @@ export const routes: Routes = [
   { path: 'admin-admin-dashboard', component: AdminAdminDashboardComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: 'users-ticketqueue', component: UsersTicketqueueComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
   { path: 'users-newticket', component:UsersNewticketComponent, canActivate:[AuthGuard], data: { role: 'user' } },
-  { path: 'users-ticketdescription', component: UsersTicketdescriptionComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
+  { path: 'users-ticketdescription/:id', component: UsersTicketdescriptionComponent, canActivate:[AuthGuard] , data: { role: 'user' }},
   { path: 'admin-ticketsqueue', component: AdminTicketsqueueComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: 'admin-newticket', component:AdminNewticketComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
-  { path: 'admin-ticketdescription', component:AdminTicketdescriptionComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
+  { path: 'admin-ticketdescription/:id', component:AdminTicketdescriptionComponent, canActivate:[AuthGuard], data: { role: 'admin' } },
   { path: 'admin-manageusers', component:AdminManageusersComponent, canActivate:[AuthGuard] , data: { role: 'admin' }},
   { path: '', component:AboutComponent}
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
 

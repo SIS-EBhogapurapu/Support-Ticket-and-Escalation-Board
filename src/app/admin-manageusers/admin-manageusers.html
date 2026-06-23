@@ -19,7 +19,7 @@
 
       <div class="user-row" *ngFor="let user of users">
         <span class="user-name">{{ user }}</span>
-        <button class="delete-btn">DELETE</button>
+        <button class="delete-btn" (click)="deleteUser(user)">DELETE</button>
       </div>
 
     </div>

@@ -11,12 +11,12 @@
   <div class="content">
 
     <!-- Left Box -->
-    <div class="info-box">
-      <p><strong>Ticket ID :</strong> T001</p>
-      <p><strong>Title :</strong> Login Issue</p>
-      <p><strong>Priority :</strong> Low</p>
-      <p><strong>Status :</strong> In Progress</p>
-      <p><strong>Owner :</strong> ADMIN</p>
+    <div class="info-box" *ngIf="ticket">
+      <p><strong>Ticket ID :</strong> {{ ticket.id }}</p>
+      <p><strong>Title :</strong> {{ ticket.name }}</p>
+      <p><strong>Priority :</strong> {{ ticket.priority }}</p>
+      <p><strong>Status :</strong> {{ ticket.status }}</p>
+      <p><strong>Owner :</strong> {{ ticket.owner }}</p>
     </div>
 
     <!-- Right Box -->

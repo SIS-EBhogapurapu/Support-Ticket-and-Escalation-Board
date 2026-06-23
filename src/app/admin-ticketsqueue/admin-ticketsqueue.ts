@@ -1,44 +1,38 @@
-import { Component } from '@angular/core';
-import { RouterEvent, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { AdminSidenav } from '../admin-sidenav/admin-sidenav';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { TicketService, Ticket } from '../services/ticket.service';
 
 @Component({
   selector: 'app-admin-ticketsqueue',
   standalone:true,
-  imports: [RouterLink,RouterLinkActive,RouterModule,AdminSidenav,FormsModule],
+  imports: [RouterLink,RouterLinkActive,RouterModule,AdminSidenav,FormsModule,CommonModule],
   templateUrl: './admin-ticketsqueue.html',
   styleUrl: './admin-ticketsqueue.css',
 })
-export class AdminTicketsqueueComponent {
-  tickets = [
-  { id: 'T001', name: 'Dummy1', priority: 'High', status: 'Open', owner: 'ADMIN' },
-  { id: 'T002', name: 'Dummy2', priority: 'Moderate', status: 'Closed', owner: 'ADMIN' },
-  { id: 'T003', name: 'Dummy3', priority: 'Low', status: 'Open', owner: 'ADMIN' }
-  ];
+export class AdminTicketsqueueComponent implements OnInit {
+  tickets: Ticket[] = [];
+  filteredTickets: Ticket[] = [];
 
-  filteredTickets = [...this.tickets];
+  searchText: string = '';
+  selectedPriority: string = '';
+  selectedStatus: string = '';
 
-searchText: string = '';
-selectedPriority: string = '';
-selectedStatus: string = '';
+  constructor(private ticketService: TicketService) {}
 
-applyFilters() {
-  this.filteredTickets = this.tickets.filter(ticket => {
+  ngOnInit() {
+    this.tickets = this.ticketService.getAll();
+    this.filteredTickets = [...this.tickets];
+  }
 
-    const matchesSearch =
-      ticket.name.toLowerCase().includes(this.searchText.toLowerCase());
-
-    const matchesPriority =
-      this.selectedPriority === '' ||
-      ticket.priority === this.selectedPriority;
-
-    const matchesStatus =
-      this.selectedStatus === '' ||
-      ticket.status === this.selectedStatus;
-
-    return matchesSearch && matchesPriority && matchesStatus;
-  });
-}
-
+  applyFilters() {
+    this.filteredTickets = this.tickets.filter(ticket => {
+      const matchesSearch = ticket.name.toLowerCase().includes(this.searchText.toLowerCase());
+      const matchesPriority = this.selectedPriority === '' || ticket.priority === this.selectedPriority;
+      const matchesStatus = this.selectedStatus === '' || ticket.status === this.selectedStatus;
+      return matchesSearch && matchesPriority && matchesStatus;
+    });
+  }
 }

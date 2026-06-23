@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admin-sidenav',
@@ -8,4 +8,12 @@ import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
   templateUrl: './admin-sidenav.html',
   styleUrl: './admin-sidenav.css',
 })
-export class AdminSidenav {}
+export class AdminSidenav {
+  constructor(private router: Router) {}
+
+  logout() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('role');
+    this.router.navigate(['/login']);
+  }
+}
