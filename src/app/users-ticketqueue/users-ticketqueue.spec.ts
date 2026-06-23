@@ -2,7 +2,7 @@
 
 import { UsersTicketqueueComponent } from './users-ticketqueue';
 
-describe('UsersTq', () => {
+describe('UsersTicketqueue', () => {
   let component: UsersTicketqueueComponent;
   let fixture: ComponentFixture<UsersTicketqueueComponent>;
 
@@ -20,4 +20,5 @@ describe('UsersTq', () => {
     expect(component).toBeTruthy();
   });
 });
+
 

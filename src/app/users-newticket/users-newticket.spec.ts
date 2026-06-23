@@ -2,7 +2,7 @@
 
 import { UsersNewticketComponent } from './users-newticket';
 
-describe('UsersNewt', () => {
+describe('UsersNewticket', () => {
   let component: UsersNewticketComponent;
   let fixture: ComponentFixture<UsersNewticketComponent>;
 
@@ -20,4 +20,5 @@ describe('UsersNewt', () => {
     expect(component).toBeTruthy();
   });
 });
+
 

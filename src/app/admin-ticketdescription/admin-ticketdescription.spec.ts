@@ -2,7 +2,7 @@
 
 import { AdminTicketdescriptionComponent } from './admin-ticketdescription';
 
-describe('AdminTdes', () => {
+describe('AdminTicketdescription', () => {
   let component: AdminTicketdescriptionComponent;
   let fixture: ComponentFixture<AdminTicketdescriptionComponent>;
 
@@ -20,4 +20,5 @@ describe('AdminTdes', () => {
     expect(component).toBeTruthy();
   });
 });
+
 

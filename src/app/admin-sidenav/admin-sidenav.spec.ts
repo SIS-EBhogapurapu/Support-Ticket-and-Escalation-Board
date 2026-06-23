@@ -2,7 +2,7 @@
 
 import { AdminSidenav } from './admin-sidenav';
 
-describe('AdminSidebar', () => {
+describe('AdminSidenav', () => {
   let component: AdminSidenav;
   let fixture: ComponentFixture<AdminSidenav>;
 
@@ -20,4 +20,5 @@ describe('AdminSidebar', () => {
     expect(component).toBeTruthy();
   });
 });
+
 

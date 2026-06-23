@@ -2,7 +2,7 @@
 
 import { AdminNewticketComponent } from './admin-newticket';
 
-describe('AdminNewt', () => {
+describe('AdminNewticket', () => {
   let component: AdminNewticketComponent;
   let fixture: ComponentFixture<AdminNewticketComponent>;
 
@@ -20,4 +20,5 @@ describe('AdminNewt', () => {
     expect(component).toBeTruthy();
   });
 });
+
 
