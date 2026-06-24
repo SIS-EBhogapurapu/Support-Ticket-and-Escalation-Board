@@ -71,7 +71,7 @@
             <td>{{ ticket.priority }}</td>
             <td>{{ ticket.status }}</td>
             <td>{{ ticket.owner }}</td>
-            <td><a routerLink="/admin-ticketdescription" routerLinkActive="active">View</a></td>
+            <td><a [routerLink]="['/admin-ticketdescription', ticket.id]">View</a></td>
           </tr>
         </tbody>
       </table>
