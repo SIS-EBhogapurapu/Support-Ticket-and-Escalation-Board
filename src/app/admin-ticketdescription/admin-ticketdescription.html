@@ -12,17 +12,55 @@
 
     <!-- Left Box -->
     <div class="info-box" *ngIf="ticket">
+
       <p><strong>Ticket ID :</strong> {{ ticket.id }}</p>
-      <p><strong>Title :</strong> {{ ticket.name }}</p>
-      <p><strong>Priority :</strong> {{ ticket.priority }}</p>
-      <p><strong>Status :</strong> {{ ticket.status }}</p>
-      <p><strong>Owner :</strong> {{ ticket.owner }}</p>
+
+      <div class="field-group">
+        <strong>Title :</strong>
+        <input type="text" class="field-input" [(ngModel)]="ticket.name" />
+      </div>
+
+      <div class="field-group">
+        <strong>Priority :</strong>
+        <div class="radio-options">
+          <label class="radio-label high">
+            <input type="radio" name="priority" value="High" [(ngModel)]="ticket.priority" /> High
+          </label>
+          <label class="radio-label medium">
+            <input type="radio" name="priority" value="Medium" [(ngModel)]="ticket.priority" /> Medium
+          </label>
+          <label class="radio-label low">
+            <input type="radio" name="priority" value="Low" [(ngModel)]="ticket.priority" /> Low
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <strong>Status :</strong>
+        <div class="radio-options">
+          <label class="radio-label open">
+            <input type="radio" name="status" value="Open" [(ngModel)]="ticket.status" /> Open
+          </label>
+          <label class="radio-label closed">
+            <input type="radio" name="status" value="Closed" [(ngModel)]="ticket.status" /> Closed
+          </label>
+          <label class="radio-label inprogress">
+            <input type="radio" name="status" value="In Progress" [(ngModel)]="ticket.status" /> In Progress
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <strong>Owner :</strong>
+        <input type="text" class="field-input" [(ngModel)]="ticket.owner" />
+      </div>
+
     </div>
 
     <!-- Right Box -->
     <div class="desc-box">
       <h3>Description</h3>
-      <textarea placeholder="Enter description..."></textarea>
+      <textarea placeholder="Enter the description..."></textarea>
     </div>
 
   </div>

@@ -88,6 +88,68 @@
   font-weight: 600;
 }
 
+/* Editable Field Groups */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  gap: 8px;
+}
+
+.field-input {
+  padding: 10px 15px;
+  border: 2px solid #eef1f7;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #f5f7fb;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(30, 58, 138, 0.15);
+}
+
+/* Radio Button Groups */
+.radio-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Priority colors */
+.radio-label.high  { color: #d32f2f; accent-color: #d32f2f; }
+.radio-label.medium { color: #f57c00; accent-color: #f57c00; }
+.radio-label.low   { color: #2e7d32; accent-color: #2e7d32; }
+
+/* Status colors */
+.radio-label.open       { color: #1e3a8a; accent-color: #1e3a8a; }
+.radio-label.closed     { color: #616161; accent-color: #616161; }
+.radio-label.inprogress { color: #f57c00; accent-color: #f57c00; }
+
 /* Right Description Box */
 .desc-box {
   background: white;

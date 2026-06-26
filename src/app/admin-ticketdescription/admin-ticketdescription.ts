@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule, ActivatedRoute } from '@angular/router';
 import { TicketService, Ticket } from '../services/ticket.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-ticketdescription',
   standalone: true,
-  imports: [RouterLink,RouterLinkActive,RouterModule,CommonModule],
+  imports: [RouterLink,RouterLinkActive,RouterModule,CommonModule,FormsModule],
   templateUrl: './admin-ticketdescription.html',
   styleUrl: './admin-ticketdescription.css',
 })
