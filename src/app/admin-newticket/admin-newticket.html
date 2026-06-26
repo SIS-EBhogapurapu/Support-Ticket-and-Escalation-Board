@@ -1,48 +1,79 @@
-<div class="ticket-form">
-  <div class="form-header">
-    <h2>RAISE NEW TICKET</h2>
-    <span class="admin-box">ADMIN</span>
+<div class="details-container">
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="back-arrow" routerLink="/admin-ticketsqueue" routerLinkActive="active">&#8592;</button>
+    <h1>RAISE NEW TICKET</h1>
+    <div class="admin-btn">ADMIN</div>
   </div>
 
-  <form>
-    <!-- Title -->
-    <div class="form-group">
-      <label for="title">TITLE</label>
-      <input type="text" id="title" name="title" />
-    </div>
+  <!-- Main Section -->
+  <div class="content">
 
-    <!-- Priority -->
-    <div class="form-group">
-      <label>Priority</label>
-      <div class="priority-options">
-        <label><input type="radio" name="priority" value="High" /> High</label>
-        <label><input type="radio" name="priority" value="Medium" /> Medium</label>
-        <label><input type="radio" name="priority" value="Low" /> Low</label>
+    <!-- Left Box -->
+    <div class="info-box">
+
+      <div class="field-group">
+        <strong>Title :</strong>
+        <input type="text" class="field-input" placeholder="Enter ticket title" />
       </div>
+
+      <div class="field-group">
+        <strong>Priority :</strong>
+        <div class="radio-options">
+          <label class="radio-label high">
+            <input type="radio" name="priority" value="High" /> High
+          </label>
+          <label class="radio-label medium">
+            <input type="radio" name="priority" value="Medium" /> Medium
+          </label>
+          <label class="radio-label low">
+            <input type="radio" name="priority" value="Low" /> Low
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <strong>Status :</strong>
+        <div class="radio-options">
+          <label class="radio-label open">
+            <input type="radio" name="status" value="Open" /> Open
+          </label>
+          <label class="radio-label closed">
+            <input type="radio" name="status" value="Closed" /> Closed
+          </label>
+          <label class="radio-label inprogress">
+            <input type="radio" name="status" value="In Progress" /> In Progress
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <strong>Owner :</strong>
+        <input type="text" class="field-input" placeholder="Assign owner" />
+      </div>
+
     </div>
 
-    <!-- Status -->
-    <div class="form-group">
-      <label for="status">Status</label>
-      <input type="text" id="status" name="status" value="OPEN" readonly />
+    <!-- Right Box -->
+    <div class="desc-box">
+      <h3>Description</h3>
+      <textarea placeholder="Enter description..."></textarea>
     </div>
 
-    <!-- Description -->
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea id="description" name="description"></textarea>
-    </div>
+  </div>
 
-    <!-- Assign Owner -->
-    <div class="form-group">
-      <label for="owner">Assign Owner</label>
-      <input type="text" id="owner" name="owner" value="ADMIN" readonly />
+  <!-- Comments Section -->
+  <div class="comments-box">
+    <h3>Comments</h3>
+    <div class="comment-input">
+      <input type="text" placeholder="Write a Comment" />
+      <button>Send</button>
     </div>
-
-    <!-- Buttons -->
     <div class="form-actions">
-      <button type="button" class="btn-submit" routerLink="/admin-ticketsqueue" routerLinkActive="active">Submit</button>
-      <button type="button" class="btn-cancel" routerLink="/admin-admin-dashboard" routerLinkActive="active">Cancel</button>
+      <button class="btn-submit" routerLink="/admin-ticketsqueue" routerLinkActive="active">Submit</button>
+      <button class="btn-cancel" routerLink="/admin-admin-dashboard" routerLinkActive="active">Cancel</button>
     </div>
-  </form>
+  </div>
+
 </div>
